@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "name": "book_store",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Temka1358/Book_Store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Temka1358/Book_Store/issues"
+  },
+  "homepage": "https://github.com/Temka1358/Book_Store#readme"
+}
