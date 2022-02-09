@@ -98,7 +98,6 @@ router.get("/publisherBooks", (req,res)=>{
         } else {
             counter = map.get(book.publisher);
             map.set(book.publisher, counter+1);
-            console.log(counter);
         }
         return book.publisher
     })

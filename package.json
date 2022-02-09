@@ -1,12 +1,15 @@
 {
   "dependencies": {
-    "express": "^4.17.2"
+    "axios": "^0.25.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "fetch": "^1.1.0",
+    "node-fetch": "^3.2.0"
   },
   "name": "book_store",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
