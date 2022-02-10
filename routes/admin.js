@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
 })
 
 app.get("/addbook", (req, res)=>{
-  res.render("addForm")
+  res.render("Form")
 })
 
 

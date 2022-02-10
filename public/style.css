@@ -60,7 +60,7 @@ form{
     width: 60%;
 }
 
-input, textarea, button{
+input, textarea, form button{
     display: block;
     width: 80%;
     margin: 10px auto;
@@ -73,7 +73,7 @@ input, textarea, button{
 #book-description{
     height: 50px;
 }
-form button{
+.add-form button{
   margin-top: 50px;
   width: 85% !important;
   color: green;
