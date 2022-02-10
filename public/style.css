@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+body{
+    background-color: rgb(44, 43, 43);
+    color: white;
+}
 .books{
     display: flex;
     flex-wrap: wrap;
@@ -62,12 +66,26 @@ input, textarea, button{
     margin: 10px auto;
     padding: 10px;
     border-radius: 10px;
-    border:1px solid rgb(150, 136, 136)
+    border:1px solid rgb(150, 136, 136);
+    
 }
 
 #book-description{
     height: 50px;
 }
 form button{
-   margin-top: 30px;
+  margin-top: 50px;
+  width: 85% !important;
+  color: green;
+  border: 1px solid green;
+  height: 45px;
+}
+
+button:hover{
+    background-color: green;
+    color: white;
+}
+input:hover, textarea:hover{
+    font-size: 1.5rem;
+    background-color: white;
 }
