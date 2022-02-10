@@ -1,0 +1,65 @@
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.book{
+    width:  30%;
+    border: solid 1px rgb(150, 136, 136);
+    margin-top: 2em;
+    padding-top: 1em;
+    position: relative;
+    font-size: 15px;
+}
+.book p{
+    font-size: 1.5vw;
+}
+
+.book img{
+    width: 90%;
+    height: 90%;
+}
+
+.book .delete-btn{
+    position: absolute;
+    background-color: red;
+    padding: .5rem 1rem;
+    border: none;
+    color: white;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    display: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.book:hover .delete-btn{
+    display: block;
+}
+
+
+/* form styles  */
+
+form{
+    
+}
+
+input{
+    display: block;
+    width: 80%;
+    margin: 1em auto;
+    padding: 5px;
+    border-radius: 10px;
+    border:1px solid rgb(150, 136, 136)
+}

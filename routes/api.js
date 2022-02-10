@@ -2,6 +2,8 @@ const express = require("express");
 const router = new express.Router();
 const data = require('../book.json'); 
 const app = require("./admin");
+const fs = require('fs')
+const path = require('path')
 
 //list of books  
 books = data.books;
@@ -104,4 +106,13 @@ router.get("/publisherBooks", (req,res)=>{
     res.send(Object.fromEntries(map))
 })
 module.exports = router;
-
+//delete book
+router.get("/deletebook/:isbn", (req,res)=>{
+    let isbn = req.params.isbn
+    updated_books = books.filter( book =>{
+        return book.isbn !== isbn
+    })
+    let data = {"books": updated_books}
+    fs.writeFileSync(path.join(__dirname, "../book.json"), JSON.stringify(data))
+    res.send("Book deleted")
+})

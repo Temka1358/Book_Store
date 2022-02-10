@@ -19,7 +19,11 @@ app.get('/', async (req, res) => {
       res.send(error)
     })
 
-  //res.render('index.ejs')
 })
+
+app.get("/addbook", (req, res)=>{
+  res.render("addForm")
+})
+
 
 module.exports = app
