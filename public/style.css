@@ -76,14 +76,15 @@ input, textarea, form button{
 .add-form button{
   margin-top: 50px;
   width: 85% !important;
-  color: green;
-  border: 1px solid green;
+  color: white;
   height: 45px;
+  background: green;
 }
 
+
 button:hover{
-    background-color: green;
     color: white;
+    border: 1px solid white;
 }
 input:hover, textarea:hover{
     font-size: 1.5rem;

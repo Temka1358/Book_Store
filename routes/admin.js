@@ -2,8 +2,11 @@
 'use strict'
 const { strict } = require('assert')
 const express = require('express')
+const { fstat } = require('fs')
 const path = require('path')
 const app = new express()
+const books_default = require('../book_default.json')
+const fs = require('fs')
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '../views'))
@@ -25,5 +28,14 @@ app.get("/addbook", (req, res)=>{
   res.render("Form")
 })
 
+app.get("/reset", (req,res)=>{
+  fs.writeFile(path.join(__dirname, "../book.json"), JSON.stringify(books_default), async err =>{
+    if(err){
+      await res.send("Error occured white updating booj.json.: " + err)
+    }
+    await res.redirect('/')
+  })
+  
+})
 
 module.exports = app
