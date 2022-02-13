@@ -26,14 +26,15 @@ app.get('/', async (req, res) => {
 
 app.get("/addbook", (req, res)=>{
   res.render("Form")
+
 })
 
-app.get("/reset", (req,res)=>{
-  fs.writeFile(path.join(__dirname, "../book.json"), JSON.stringify(books_default), async err =>{
+app.get("/reset", async (req,res)=>{
+    await fs.writeFile(path.join(__dirname, "../book.json"), JSON.stringify(books_default), async err =>{
     if(err){
-      await res.send("Error occured white updating booj.json.: " + err)
+      res.send("Error occured white updating booj.json.: " + err)
     }
-    await res.redirect('/')
+     res.redirect('/')
   })
   
 })
