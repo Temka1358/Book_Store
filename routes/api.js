@@ -116,3 +116,17 @@ router.get("/deletebook/:isbn", (req,res)=>{
     fs.writeFileSync(path.join(__dirname, "../book.json"), JSON.stringify(data))
     res.send("Book deleted")
 })
+
+//Post api for adding book to book.json
+router.post('/addbook', (req, res)=>{
+    book =  req.body
+    book.published = (new Date(book.published)).toISOString()
+    book.pages = parseInt(book.pages);
+    console.log(books.length)
+    books.push(book)
+    console.log(books.length)
+    fs.writeFileSync(path.join(__dirname, "../book.json"), JSON.stringify({"books": books}))
+
+    res.send({"message": "book added"})
+    
+})
